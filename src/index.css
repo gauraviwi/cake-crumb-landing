@@ -99,6 +99,31 @@
   body {
     @apply bg-background text-foreground font-inter;
   }
+
+  /* Consistent font usage across the site */
+  h1, .hero-title {
+    @apply font-gilroy font-black;
+  }
+
+  h2, h3, .section-title {
+    @apply font-playfair font-semibold;
+  }
+
+  h4, h5, h6, .card-title {
+    @apply font-gilroy font-bold;
+  }
+
+  p, .body-text {
+    @apply font-inter;
+  }
+
+  .brand-name {
+    @apply font-playfair font-medium;
+  }
+
+  .button-text {
+    @apply font-gilroy font-bold;
+  }
 }
 
 @layer utilities {
@@ -132,6 +157,23 @@
   
   .animate-bounce-slow {
     animation: bounce-slow 4s ease-in-out infinite;
+  }
+
+  /* Consistent color scheme */
+  .text-primary {
+    @apply text-rose-600;
+  }
+
+  .text-secondary {
+    @apply text-gray-600;
+  }
+
+  .bg-primary {
+    @apply bg-rose-600;
+  }
+
+  .border-primary {
+    @apply border-rose-200;
   }
 }
 

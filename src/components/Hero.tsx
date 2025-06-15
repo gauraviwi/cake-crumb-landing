@@ -1,6 +1,6 @@
 
 import { Button } from '@/components/ui/button';
-import { MessageCircle, Heart, Sparkles } from 'lucide-react';
+import { MessageCircle } from 'lucide-react';
 
 const Hero = () => {
   const handleWhatsAppClick = () => {
@@ -34,12 +34,6 @@ const Hero = () => {
           
           {/* Text Content */}
           <div className="text-center lg:text-left animate-fade-in">
-            {/* Premium Badge */}
-            <div className="inline-flex items-center gap-2 bg-white/90 backdrop-blur-sm rounded-full px-6 py-3 mb-8 shadow-elegant border border-rose-100">
-              <Heart className="h-5 w-5 text-rose-500" />
-              <span className="text-sm font-semibold text-gray-700 tracking-wide">HANDCRAFTED WITH LOVE</span>
-            </div>
-
             {/* Brand Name */}
             <h2 className="font-playfair text-3xl md:text-4xl font-medium text-rose-600 mb-4">
               ARA Bakers
@@ -56,41 +50,18 @@ const Hero = () => {
 
             {/* Subtitle */}
             <p className="text-xl md:text-2xl text-gray-600 mb-10 max-w-2xl mx-auto lg:mx-0 leading-relaxed">
-              Fresh, delicious cakes baked daily using premium ingredients. 
-              <span className="text-rose-600 font-medium">Ready for pickup only.</span>
+              Fresh, delicious cakes baked daily using premium ingredients for your special moments.
             </p>
 
             {/* WhatsApp CTA Button */}
             <Button 
               onClick={handleWhatsAppClick}
               size="lg" 
-              className="bg-gradient-to-r from-green-500 to-green-600 hover:from-green-600 hover:to-green-700 text-white px-10 py-6 text-lg font-bold rounded-full transition-all duration-300 hover:scale-105 shadow-elegant flex items-center gap-4 mx-auto lg:mx-0 mb-12"
+              className="bg-gradient-to-r from-green-500 to-green-600 hover:from-green-600 hover:to-green-700 text-white px-10 py-6 text-lg font-bold rounded-full transition-all duration-300 hover:scale-105 shadow-elegant flex items-center gap-4 mx-auto lg:mx-0"
             >
               <MessageCircle className="h-7 w-7" />
               Order via WhatsApp
             </Button>
-
-            {/* Feature highlights */}
-            <div className="grid grid-cols-3 gap-8 max-w-md mx-auto lg:mx-0">
-              <div className="text-center">
-                <div className="w-16 h-16 bg-gradient-to-br from-rose-100 to-pink-100 rounded-2xl flex items-center justify-center mx-auto mb-3 shadow-soft animate-bounce-slow">
-                  <div className="text-xl font-bold text-rose-600">Fresh</div>
-                </div>
-                <div className="text-gray-600 text-sm font-medium">Daily Baked</div>
-              </div>
-              <div className="text-center">
-                <div className="w-16 h-16 bg-gradient-to-br from-rose-100 to-pink-100 rounded-2xl flex items-center justify-center mx-auto mb-3 shadow-soft animate-bounce-slow" style={{ animationDelay: '0.5s' }}>
-                  <Heart className="h-8 w-8 text-rose-500" />
-                </div>
-                <div className="text-gray-600 text-sm font-medium">Made Fresh</div>
-              </div>
-              <div className="text-center">
-                <div className="w-16 h-16 bg-gradient-to-br from-rose-100 to-pink-100 rounded-2xl flex items-center justify-center mx-auto mb-3 shadow-soft animate-bounce-slow" style={{ animationDelay: '1s' }}>
-                  <Sparkles className="h-8 w-8 text-rose-500" />
-                </div>
-                <div className="text-gray-600 text-sm font-medium">Premium Quality</div>
-              </div>
-            </div>
           </div>
 
           {/* Hero Image */}
@@ -101,7 +72,7 @@ const Hero = () => {
               <div className="absolute -inset-4 bg-gradient-to-br from-pink-200/40 to-rose-200/40 rounded-3xl blur-xl"></div>
               
               <img
-                src="https://images.unsplash.com/photo-1464349095431-e9a21285b5f3?auto=format&fit=crop&w=600&h=500"
+                src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&fit=crop&w=600&h=500"
                 alt="Beautiful homemade cake by ARA Bakes"
                 className="relative w-full h-96 lg:h-[500px] object-cover rounded-3xl shadow-elegant border-4 border-white/50 animate-bounce-slow"
               />
