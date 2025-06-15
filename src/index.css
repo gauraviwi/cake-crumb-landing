@@ -103,7 +103,11 @@
   }
   
   .gradient-hero {
-    background: linear-gradient(135deg, #FFE8F0 0%, #FFF5F7 100%);
+    background: linear-gradient(135deg, #FFE8F0 0%, #FFF5F7 30%, #F8F0F5 70%, #FFE8F0 100%);
+  }
+  
+  .gradient-elegant {
+    background: linear-gradient(135deg, #FCE4EC 0%, #F8BBD9 50%, #E1BEE7 100%);
   }
   
   .text-shadow-soft {
@@ -116,5 +120,9 @@
   
   .shadow-card {
     box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12);
+  }
+  
+  .shadow-elegant {
+    box-shadow: 0 10px 40px rgba(219, 39, 119, 0.15);
   }
 }
