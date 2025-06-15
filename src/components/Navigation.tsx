@@ -1,6 +1,27 @@
 
 import React from 'react';
 
+const NAV_LINKS = [
+  { label: 'Home', target: '#home' },
+  { label: 'About', target: '#about' },
+  { label: 'Menu', target: '#menu' },
+  { label: 'Contact', target: '#contact' },
+];
+
+// Smooth scroll handler
+function handleNavClick(e: React.MouseEvent<HTMLAnchorElement>, hash: string) {
+  if (hash && hash.startsWith('#')) {
+    const targetId = hash.replace('#', '');
+    const target = document.getElementById(targetId);
+    if (target) {
+      e.preventDefault();
+      target.scrollIntoView({ behavior: 'smooth' });
+      // Optionally, update URL hash without jumping:
+      window.history.replaceState(null, '', hash);
+    }
+  }
+}
+
 const Navigation = () => {
   return (
     <nav
@@ -9,8 +30,20 @@ const Navigation = () => {
     >
       {/* Left: Home + About */}
       <div className="flex items-center space-x-16 flex-1 justify-start">
-        <a href="#home" className="font-gilroy font-semibold text-gray-700 hover:text-rose-600 transition-colors text-md">Home</a>
-        <a href="#about" className="font-gilroy font-semibold text-gray-700 hover:text-rose-600 transition-colors text-md">About</a>
+        <a
+          href="#home"
+          className="font-gilroy font-semibold text-gray-700 hover:text-rose-600 transition-colors text-md"
+          onClick={e => handleNavClick(e, '#home')}
+        >
+          Home
+        </a>
+        <a
+          href="#about"
+          className="font-gilroy font-semibold text-gray-700 hover:text-rose-600 transition-colors text-md"
+          onClick={e => handleNavClick(e, '#about')}
+        >
+          About
+        </a>
       </div>
 
       {/* Logo Centered, clickable */}
@@ -29,8 +62,20 @@ const Navigation = () => {
 
       {/* Right: Menu + Contact */}
       <div className="flex items-center space-x-16 flex-1 justify-end">
-        <a href="#menu" className="font-gilroy font-semibold text-gray-700 hover:text-rose-600 transition-colors text-md">Menu</a>
-        <a href="#contact" className="font-gilroy font-semibold text-gray-700 hover:text-rose-600 transition-colors text-md">Contact</a>
+        <a
+          href="#menu"
+          className="font-gilroy font-semibold text-gray-700 hover:text-rose-600 transition-colors text-md"
+          onClick={e => handleNavClick(e, '#menu')}
+        >
+          Menu
+        </a>
+        <a
+          href="#contact"
+          className="font-gilroy font-semibold text-gray-700 hover:text-rose-600 transition-colors text-md"
+          onClick={e => handleNavClick(e, '#contact')}
+        >
+          Contact
+        </a>
       </div>
     </nav>
   );

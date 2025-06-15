@@ -1,3 +1,4 @@
+
 import { Button } from '@/components/ui/button';
 import { MessageCircle } from 'lucide-react';
 import { Heart, Star } from 'lucide-react';
@@ -42,6 +43,12 @@ const Hero = () => {
           
           {/* Text Content */}
           <div className="text-center lg:text-left animate-fade-in">
+            {/* Brand Name - ARA BAKES */}
+            <div className="mb-3">
+              <span className="inline-block text-rose-600 font-playfair text-3xl md:text-4xl tracking-wide font-bold uppercase drop-shadow-md transition-all duration-500">
+                ARA BAKES
+              </span>
+            </div>
             {/* Main Heading */}
             <h1 className="font-gilroy text-5xl md:text-7xl font-black text-gray-800 mb-6 text-shadow-soft leading-tight">
               Homemade Cakes
