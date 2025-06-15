@@ -58,7 +58,7 @@ const Hero = () => {
 
             {/* Subtitle */}
             <p className="text-xl md:text-2xl text-gray-600 mb-10 max-w-2xl mx-auto lg:mx-0 leading-relaxed">
-              Fresh, delicious 1kg cakes baked daily using premium ingredients. 
+              Fresh, delicious cakes baked daily using premium ingredients. 
               <span className="text-rose-600 font-medium">Ready for pickup only.</span>
             </p>
 
@@ -75,19 +75,19 @@ const Hero = () => {
             {/* Feature highlights */}
             <div className="grid grid-cols-3 gap-8 max-w-md mx-auto lg:mx-0">
               <div className="text-center">
-                <div className="w-16 h-16 bg-gradient-to-br from-rose-100 to-pink-100 rounded-2xl flex items-center justify-center mx-auto mb-3 shadow-soft">
-                  <div className="text-2xl font-bold text-rose-600">1kg</div>
+                <div className="w-16 h-16 bg-gradient-to-br from-rose-100 to-pink-100 rounded-2xl flex items-center justify-center mx-auto mb-3 shadow-soft animate-bounce-slow">
+                  <div className="text-xl font-bold text-rose-600">Fresh</div>
                 </div>
-                <div className="text-gray-600 text-sm font-medium">Perfect Size</div>
+                <div className="text-gray-600 text-sm font-medium">Daily Baked</div>
               </div>
               <div className="text-center">
-                <div className="w-16 h-16 bg-gradient-to-br from-rose-100 to-pink-100 rounded-2xl flex items-center justify-center mx-auto mb-3 shadow-soft">
+                <div className="w-16 h-16 bg-gradient-to-br from-rose-100 to-pink-100 rounded-2xl flex items-center justify-center mx-auto mb-3 shadow-soft animate-bounce-slow" style={{ animationDelay: '0.5s' }}>
                   <Heart className="h-8 w-8 text-rose-500" />
                 </div>
                 <div className="text-gray-600 text-sm font-medium">Made Fresh</div>
               </div>
               <div className="text-center">
-                <div className="w-16 h-16 bg-gradient-to-br from-rose-100 to-pink-100 rounded-2xl flex items-center justify-center mx-auto mb-3 shadow-soft">
+                <div className="w-16 h-16 bg-gradient-to-br from-rose-100 to-pink-100 rounded-2xl flex items-center justify-center mx-auto mb-3 shadow-soft animate-bounce-slow" style={{ animationDelay: '1s' }}>
                   <Sparkles className="h-8 w-8 text-rose-500" />
                 </div>
                 <div className="text-gray-600 text-sm font-medium">Premium Quality</div>
@@ -103,19 +103,19 @@ const Hero = () => {
               <div className="absolute -inset-4 bg-gradient-to-br from-pink-200/40 to-rose-200/40 rounded-3xl blur-xl"></div>
               
               <img
-                src="/lovable-uploads/7fa80119-2339-4916-8129-52a2bb0763b7.png"
+                src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&fit=crop&w=600&h=500"
                 alt="Beautiful homemade cake by ARA Bakes"
-                className="relative w-full h-96 lg:h-[500px] object-cover rounded-3xl shadow-elegant border-4 border-white/50"
+                className="relative w-full h-96 lg:h-[500px] object-cover rounded-3xl shadow-elegant border-4 border-white/50 animate-bounce-slow"
               />
               
               {/* Price overlay badge */}
-              <div className="absolute -bottom-8 -left-8 bg-white/95 backdrop-blur-sm p-6 rounded-3xl shadow-elegant border border-rose-100 max-w-xs">
+              <div className="absolute -bottom-8 -left-8 bg-white/95 backdrop-blur-sm p-6 rounded-3xl shadow-elegant border border-rose-100 max-w-xs animate-bounce-slow" style={{ animationDelay: '1.5s' }}>
                 <div className="text-center">
                   <div className="text-4xl font-bold bg-gradient-to-r from-rose-500 to-pink-600 bg-clip-text text-transparent mb-2">
                     13-18€
                   </div>
                   <div className="text-gray-600 font-semibold mb-1">Starting Price</div>
-                  <div className="text-sm text-gray-500">Premium 1kg Cakes</div>
+                  <div className="text-sm text-gray-500">Premium Cakes</div>
                 </div>
               </div>
             </div>

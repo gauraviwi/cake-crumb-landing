@@ -1,32 +1,36 @@
 
-import { Cake, Facebook, Instagram, Twitter, Heart } from 'lucide-react';
+import { Cake, MessageCircle, Instagram, Twitter, Heart } from 'lucide-react';
 
 const Footer = () => {
-  const currentYear = new Date().getFullYear();
+  const currentYear = 2025;
 
   const footerLinks = {
     company: [
       { name: 'About Us', href: '#about' },
       { name: 'Our Story', href: '#about' },
-      { name: 'Careers', href: '#' },
-      { name: 'Press', href: '#' }
+      { name: 'Gallery', href: '#' },
+      { name: 'Reviews', href: '#' }
     ],
     services: [
       { name: 'Custom Cakes', href: '#services' },
-      { name: 'Wedding Cakes', href: '#services' },
-      { name: 'Catering', href: '#services' },
-      { name: 'Delivery', href: '#services' }
+      { name: 'Contact Us for Custom Cakes', href: '#contact' },
+      { name: 'Birthday Cakes', href: '#services' },
+      { name: 'Special Occasions', href: '#services' }
     ],
     support: [
       { name: 'Contact Us', href: '#contact' },
       { name: 'FAQ', href: '#' },
-      { name: 'Order Tracking', href: '#' },
-      { name: 'Returns', href: '#' }
+      { name: 'Pickup Information', href: '#' },
+      { name: 'Care Instructions', href: '#' }
     ]
   };
 
+  const handleWhatsAppClick = () => {
+    window.open('https://wa.me/947757155821', '_blank');
+  };
+
   return (
-    <footer className="bg-deep-brown text-white">
+    <footer className="bg-gradient-to-br from-rose-50 via-pink-50 to-rose-100 border-t border-rose-200">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         
         {/* Main Footer Content */}
@@ -35,33 +39,33 @@ const Footer = () => {
           {/* Brand Section */}
           <div className="lg:col-span-1">
             <div className="flex items-center space-x-2 mb-4">
-              <Cake className="h-8 w-8 text-golden" />
-              <span className="font-playfair text-2xl font-bold">Sweet Dreams</span>
+              <Cake className="h-8 w-8 text-rose-500" />
+              <span className="font-playfair text-2xl font-bold text-gray-800">ARA Bakes</span>
             </div>
-            <p className="text-gray-300 mb-6 leading-relaxed">
-              Creating delicious memories since 2008. Every cake tells a story, 
+            <p className="text-gray-600 mb-6 leading-relaxed">
+              Creating delicious memories since 2025. Every cake tells a story, 
               and we're here to help you tell yours with sweetness and love.
             </p>
             
             {/* Social Links */}
             <div className="flex space-x-4">
-              <a 
-                href="#" 
-                className="p-2 bg-warm-brown rounded-full hover:bg-golden transition-colors duration-300"
-                aria-label="Facebook"
+              <button 
+                onClick={handleWhatsAppClick}
+                className="p-3 bg-gradient-to-r from-green-500 to-green-600 text-white rounded-full hover:from-green-600 hover:to-green-700 transition-all duration-300 hover:scale-105 shadow-soft"
+                aria-label="WhatsApp"
               >
-                <Facebook className="h-5 w-5" />
-              </a>
+                <MessageCircle className="h-5 w-5" />
+              </button>
               <a 
                 href="#" 
-                className="p-2 bg-warm-brown rounded-full hover:bg-golden transition-colors duration-300"
+                className="p-3 bg-gradient-to-r from-pink-500 to-rose-500 text-white rounded-full hover:from-pink-600 hover:to-rose-600 transition-all duration-300 hover:scale-105 shadow-soft"
                 aria-label="Instagram"
               >
                 <Instagram className="h-5 w-5" />
               </a>
               <a 
                 href="#" 
-                className="p-2 bg-warm-brown rounded-full hover:bg-golden transition-colors duration-300"
+                className="p-3 bg-gradient-to-r from-blue-500 to-blue-600 text-white rounded-full hover:from-blue-600 hover:to-blue-700 transition-all duration-300 hover:scale-105 shadow-soft"
                 aria-label="Twitter"
               >
                 <Twitter className="h-5 w-5" />
@@ -71,13 +75,13 @@ const Footer = () => {
 
           {/* Company Links */}
           <div>
-            <h3 className="font-semibold text-lg mb-4 text-golden">Company</h3>
+            <h3 className="font-semibold text-lg mb-4 text-gray-800">Company</h3>
             <ul className="space-y-3">
               {footerLinks.company.map((link, index) => (
                 <li key={index}>
                   <a 
                     href={link.href} 
-                    className="text-gray-300 hover:text-golden transition-colors duration-200"
+                    className="text-gray-600 hover:text-rose-600 transition-colors duration-200 font-medium"
                   >
                     {link.name}
                   </a>
@@ -88,13 +92,13 @@ const Footer = () => {
 
           {/* Services Links */}
           <div>
-            <h3 className="font-semibold text-lg mb-4 text-golden">Services</h3>
+            <h3 className="font-semibold text-lg mb-4 text-gray-800">Services</h3>
             <ul className="space-y-3">
               {footerLinks.services.map((link, index) => (
                 <li key={index}>
                   <a 
                     href={link.href} 
-                    className="text-gray-300 hover:text-golden transition-colors duration-200"
+                    className="text-gray-600 hover:text-rose-600 transition-colors duration-200 font-medium"
                   >
                     {link.name}
                   </a>
@@ -105,13 +109,13 @@ const Footer = () => {
 
           {/* Support Links */}
           <div>
-            <h3 className="font-semibold text-lg mb-4 text-golden">Support</h3>
+            <h3 className="font-semibold text-lg mb-4 text-gray-800">Support</h3>
             <ul className="space-y-3">
               {footerLinks.support.map((link, index) => (
                 <li key={index}>
                   <a 
                     href={link.href} 
-                    className="text-gray-300 hover:text-golden transition-colors duration-200"
+                    className="text-gray-600 hover:text-rose-600 transition-colors duration-200 font-medium"
                   >
                     {link.name}
                   </a>
@@ -122,11 +126,11 @@ const Footer = () => {
         </div>
 
         {/* Newsletter Section */}
-        <div className="mt-12 pt-8 border-t border-warm-brown">
+        <div className="mt-12 pt-8 border-t border-rose-200">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
             <div>
-              <h3 className="font-playfair text-2xl font-semibold mb-2">Stay Sweet</h3>
-              <p className="text-gray-300">
+              <h3 className="font-playfair text-2xl font-semibold mb-2 text-gray-800">Stay Sweet</h3>
+              <p className="text-gray-600">
                 Subscribe to our newsletter for special offers, new cake releases, and sweet updates.
               </p>
             </div>
@@ -134,9 +138,9 @@ const Footer = () => {
               <input
                 type="email"
                 placeholder="Enter your email"
-                className="flex-1 px-4 py-3 rounded-full bg-white text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-golden"
+                className="flex-1 px-4 py-3 rounded-full bg-white text-gray-800 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-rose-500 border border-rose-200 shadow-soft"
               />
-              <button className="px-6 py-3 bg-golden hover:bg-warm-brown text-white rounded-full font-semibold transition-colors duration-300">
+              <button className="px-6 py-3 bg-gradient-to-r from-rose-500 to-pink-500 hover:from-rose-600 hover:to-pink-600 text-white rounded-full font-semibold transition-all duration-300 hover:scale-105 shadow-soft">
                 Subscribe
               </button>
             </div>
@@ -144,14 +148,14 @@ const Footer = () => {
         </div>
 
         {/* Bottom Footer */}
-        <div className="mt-12 pt-8 border-t border-warm-brown flex flex-col md:flex-row justify-between items-center">
-          <p className="text-gray-300 text-sm">
-            © {currentYear} Sweet Dreams Bakery. All rights reserved.
+        <div className="mt-12 pt-8 border-t border-rose-200 flex flex-col md:flex-row justify-between items-center">
+          <p className="text-gray-600 text-sm">
+            © {currentYear} ARA Bakes. All rights reserved.
           </p>
-          <div className="flex items-center space-x-1 text-gray-300 text-sm mt-4 md:mt-0">
+          <div className="flex items-center space-x-1 text-gray-600 text-sm mt-4 md:mt-0">
             <span>Made with</span>
-            <Heart className="h-4 w-4 text-red-400 fill-current" />
-            <span>and lots of sugar</span>
+            <Heart className="h-4 w-4 text-red-500 fill-current" />
+            <span>and lots of love</span>
           </div>
         </div>
       </div>

@@ -10,7 +10,7 @@ const FeaturedCakes = () => {
       name: "Butter Cake",
       description: "Classic butter cake with rich, moist texture and vanilla flavor. Perfect for any celebration.",
       price: "13 €",
-      image: "https://images.unsplash.com/photo-1618160702438-9b02ab6515c9?auto=format&fit=crop&w=600&h=400",
+      image: "https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&fit=crop&w=600&h=400",
       popular: true,
       color: "from-yellow-100 to-amber-100"
     },
@@ -19,7 +19,7 @@ const FeaturedCakes = () => {
       name: "Chocolate Cake",
       description: "Decadent chocolate cake with deep cocoa flavor and smooth, rich texture.",
       price: "14 €",
-      image: "https://images.unsplash.com/photo-1618160702438-9b02ab6515c9?auto=format&fit=crop&w=600&h=400",
+      image: "https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&fit=crop&w=600&h=400",
       popular: false,
       color: "from-amber-100 to-orange-100"
     },
@@ -28,7 +28,7 @@ const FeaturedCakes = () => {
       name: "Ribon Cake",
       description: "Elegant layered cake with delicate ribbon design and premium taste.",
       price: "15 €",
-      image: "https://images.unsplash.com/photo-1618160702438-9b02ab6515c9?auto=format&fit=crop&w=600&h=400",
+      image: "https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&fit=crop&w=600&h=400",
       popular: false,
       color: "from-rose-100 to-pink-100"
     },
@@ -37,7 +37,7 @@ const FeaturedCakes = () => {
       name: "Date Cake",
       description: "Traditional date cake with natural sweetness and rich, authentic flavor.",
       price: "18 €",
-      image: "https://images.unsplash.com/photo-1618160702438-9b02ab6515c9?auto=format&fit=crop&w=600&h=400",
+      image: "https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&fit=crop&w=600&h=400",
       popular: true,
       color: "from-orange-100 to-red-100"
     }
@@ -77,7 +77,7 @@ const FeaturedCakes = () => {
             </span>
           </h2>
           <p className="text-xl text-gray-600 max-w-2xl mx-auto leading-relaxed">
-            Each 1kg cake is freshly baked to order and ready for pickup
+            Each cake is freshly baked to order and ready for pickup
           </p>
         </div>
 
@@ -86,7 +86,7 @@ const FeaturedCakes = () => {
           {cakes.map((cake, index) => (
             <Card 
               key={cake.id} 
-              className="group overflow-hidden border-0 shadow-soft hover:shadow-elegant transition-all duration-500 hover:-translate-y-3 bg-white/90 backdrop-blur-sm animate-fade-in"
+              className="group overflow-hidden border-0 shadow-soft hover:shadow-elegant transition-all duration-500 hover:-translate-y-3 bg-white/90 backdrop-blur-sm animate-fade-in flex flex-col h-full"
               style={{ animationDelay: `${index * 0.15}s` }}
             >
               <div className="relative overflow-hidden">
@@ -108,12 +108,12 @@ const FeaturedCakes = () => {
                 <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
               </div>
               
-              <CardContent className="p-6">
+              <CardContent className="p-6 flex flex-col flex-1">
                 <h3 className="font-playfair text-2xl font-bold text-gray-800 mb-3">
                   {cake.name}
                 </h3>
                 
-                <p className="text-gray-600 mb-6 leading-relaxed">
+                <p className="text-gray-600 mb-6 leading-relaxed flex-1">
                   {cake.description}
                 </p>
                 
@@ -121,12 +121,12 @@ const FeaturedCakes = () => {
                   <span className="font-playfair text-3xl font-bold bg-gradient-to-r from-rose-500 to-pink-600 bg-clip-text text-transparent">
                     {cake.price}
                   </span>
-                  <span className="text-sm text-gray-500 bg-gray-100 px-3 py-1 rounded-full font-medium">1kg</span>
+                  <span className="text-sm text-gray-500 bg-gray-100 px-3 py-1 rounded-full font-medium">Starting Price</span>
                 </div>
                 
                 <Button 
                   onClick={() => handleWhatsAppOrder(cake.name)}
-                  className="w-full bg-gradient-to-r from-green-500 to-green-600 hover:from-green-600 hover:to-green-700 text-white rounded-full py-3 flex items-center justify-center gap-3 transition-all duration-300 hover:scale-105 font-semibold"
+                  className="w-full bg-gradient-to-r from-green-500 to-green-600 hover:from-green-600 hover:to-green-700 text-white rounded-full py-3 flex items-center justify-center gap-3 transition-all duration-300 hover:scale-105 font-semibold mt-auto"
                 >
                   <MessageCircle className="h-5 w-5" />
                   Order Now
