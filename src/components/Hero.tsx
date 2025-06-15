@@ -18,7 +18,7 @@ const Hero = () => {
   ];
 
   return (
-    <section id="home" className="relative min-h-[80vh] md:min-h-screen flex items-center justify-center gradient-hero overflow-hidden">
+    <section id="home" className="relative min-h-screen flex items-center justify-center gradient-hero overflow-hidden pt-20 sm:pt-24 md:pt-16 lg:pt-0">
       {/* Floating decorative elements */}
       <div className="absolute inset-0 overflow-hidden">
         {/* Animated stars & hearts */}
@@ -38,19 +38,19 @@ const Hero = () => {
         <div className="absolute top-1/2 left-2 sm:left-1/4 w-14 sm:w-20 h-14 sm:h-20 rounded-full bg-gradient-to-br from-rose-300/30 to-pink-200/40 blur-xl animate-float" style={{ animationDelay: '2s' }}></div>
       </div>
 
-      <div className="relative max-w-7xl mx-auto px-3 sm:px-4 lg:px-8">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-16 items-center">
+      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 md:gap-16 items-center">
           
           {/* Text Content */}
-          <div className="text-center lg:text-left animate-fade-in px-2 sm:px-0">
+          <div className="text-center lg:text-left animate-fade-in">
             {/* Brand Name - ARA BAKES */}
             <div className="mb-2 sm:mb-3">
-              <span className="inline-block text-rose-600 font-playfair text-2xl sm:text-3xl md:text-4xl tracking-wide font-bold uppercase drop-shadow-md transition-all duration-500">
+              <span className="inline-block text-rose-600 font-playfair text-xl sm:text-2xl md:text-3xl lg:text-4xl tracking-wide font-bold uppercase drop-shadow-md transition-all duration-500">
                 ARA BAKES
               </span>
             </div>
             {/* Main Heading */}
-            <h1 className="font-gilroy text-4xl sm:text-5xl md:text-7xl font-black text-gray-800 mb-5 sm:mb-6 text-shadow-soft leading-tight">
+            <h1 className="font-gilroy text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-black text-gray-800 mb-4 sm:mb-5 md:mb-6 text-shadow-soft leading-tight">
               Homemade Cakes
               <br />
               <span className="bg-gradient-to-r from-rose-500 via-pink-500 to-rose-600 bg-clip-text text-transparent">
@@ -59,7 +59,7 @@ const Hero = () => {
             </h1>
 
             {/* Subtitle */}
-            <p className="text-lg sm:text-xl md:text-2xl text-gray-600 mb-8 sm:mb-10 max-w-2xl mx-auto lg:mx-0 leading-relaxed">
+            <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-gray-600 mb-6 sm:mb-8 md:mb-10 max-w-2xl mx-auto lg:mx-0 leading-relaxed px-2 sm:px-0">
               Fresh, delicious cakes baked daily using premium ingredients for your special moments.
             </p>
 
@@ -67,15 +67,15 @@ const Hero = () => {
             <Button 
               onClick={handleWhatsAppClick}
               size="lg" 
-              className="bg-gradient-to-r from-green-500 to-green-600 hover:from-green-600 hover:to-green-700 text-white px-8 sm:px-10 py-4 sm:py-6 text-base sm:text-lg font-bold rounded-full transition-all duration-300 hover:scale-105 shadow-elegant flex items-center gap-3 sm:gap-4 mx-auto lg:mx-0"
+              className="bg-gradient-to-r from-green-500 to-green-600 hover:from-green-600 hover:to-green-700 text-white px-6 sm:px-8 md:px-10 py-3 sm:py-4 md:py-6 text-sm sm:text-base md:text-lg font-bold rounded-full transition-all duration-300 hover:scale-105 shadow-elegant flex items-center gap-2 sm:gap-3 md:gap-4 mx-auto lg:mx-0"
             >
-              <MessageCircle className="h-6 w-6 sm:h-7 sm:w-7" />
+              <MessageCircle className="h-5 w-5 sm:h-6 sm:w-6 md:h-7 md:w-7" />
               Order via WhatsApp
             </Button>
           </div>
 
           {/* Hero Image */}
-          <div className="relative animate-scale-in mt-8 lg:mt-0 px-2 sm:px-0">
+          <div className="relative animate-scale-in mt-6 sm:mt-8 lg:mt-0">
             <div className="relative">
               {/* Background decorative circles */}
               <div className="absolute -inset-4 sm:-inset-8 bg-gradient-to-br from-rose-200/30 to-pink-300/30 rounded-full blur-3xl"></div>
@@ -84,17 +84,17 @@ const Hero = () => {
               <img
                 src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&fit=crop&w=600&h=500"
                 alt="Beautiful homemade cake by ARA Bakes"
-                className="relative w-full h-64 xs:h-72 sm:h-80 md:h-96 lg:h-[500px] object-cover rounded-2xl sm:rounded-3xl shadow-elegant border-4 border-white/50 animate-bounce-slow"
+                className="relative w-full h-48 sm:h-64 md:h-80 lg:h-96 xl:h-[500px] object-cover rounded-2xl sm:rounded-3xl shadow-elegant border-4 border-white/50 animate-bounce-slow"
               />
               
               {/* Price overlay badge */}
-              <div className="absolute -bottom-4 sm:-bottom-8 -left-4 sm:-left-8 bg-white/95 backdrop-blur-sm p-4 sm:p-6 rounded-2xl sm:rounded-3xl shadow-elegant border border-rose-100 max-w-xs animate-bounce-slow" style={{ animationDelay: '1.5s' }}>
+              <div className="absolute -bottom-3 sm:-bottom-4 md:-bottom-8 -left-3 sm:-left-4 md:-left-8 bg-white/95 backdrop-blur-sm p-3 sm:p-4 md:p-6 rounded-2xl sm:rounded-3xl shadow-elegant border border-rose-100 max-w-[140px] sm:max-w-xs animate-bounce-slow" style={{ animationDelay: '1.5s' }}>
                 <div className="text-center">
-                  <div className="text-2xl sm:text-4xl font-bold bg-gradient-to-r from-rose-500 to-pink-600 bg-clip-text text-transparent mb-1 sm:mb-2">
+                  <div className="text-xl sm:text-2xl md:text-4xl font-bold bg-gradient-to-r from-rose-500 to-pink-600 bg-clip-text text-transparent mb-1 sm:mb-2">
                     13-18€
                   </div>
-                  <div className="text-gray-600 font-semibold mb-1">Starting Price</div>
-                  <div className="text-sm text-gray-500">Premium Cakes</div>
+                  <div className="text-gray-600 font-semibold mb-1 text-xs sm:text-sm">Starting Price</div>
+                  <div className="text-xs sm:text-sm text-gray-500">Premium Cakes</div>
                 </div>
               </div>
             </div>
