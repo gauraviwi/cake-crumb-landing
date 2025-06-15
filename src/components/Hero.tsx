@@ -1,6 +1,6 @@
 
 import { Button } from '@/components/ui/button';
-import { MessageCircle, Heart, Sparkles, Cherry } from 'lucide-react';
+import { MessageCircle, Heart, Sparkles } from 'lucide-react';
 
 const Hero = () => {
   const handleWhatsAppClick = () => {
@@ -9,14 +9,12 @@ const Hero = () => {
 
   return (
     <section id="home" className="relative min-h-screen flex items-center justify-center gradient-hero overflow-hidden">
-      {/* Floating decorative elements inspired by reference */}
+      {/* Floating decorative elements */}
       <div className="absolute inset-0 overflow-hidden">
-        {/* Large floating cake decorations */}
         <div className="absolute top-20 left-10 w-40 h-40 rounded-full bg-gradient-to-br from-rose-200/40 to-pink-300/30 blur-2xl animate-float"></div>
         <div className="absolute bottom-20 right-10 w-48 h-48 rounded-full bg-gradient-to-br from-pink-200/40 to-rose-300/30 blur-2xl animate-float" style={{ animationDelay: '1s' }}></div>
         <div className="absolute top-1/2 left-1/4 w-32 h-32 rounded-full bg-gradient-to-br from-rose-300/30 to-pink-200/40 blur-xl animate-float" style={{ animationDelay: '2s' }}></div>
         
-        {/* Small floating icons like berries */}
         <div className="absolute top-32 right-32 animate-float" style={{ animationDelay: '0.5s' }}>
           <div className="w-6 h-6 bg-red-400 rounded-full shadow-lg"></div>
         </div>
@@ -27,7 +25,6 @@ const Hero = () => {
           <div className="w-5 h-5 bg-rose-400 rounded-full shadow-lg"></div>
         </div>
         
-        {/* Decorative leaf elements */}
         <div className="absolute top-24 left-1/3 w-8 h-4 bg-green-400/60 rounded-full transform rotate-45 animate-float" style={{ animationDelay: '3s' }}></div>
         <div className="absolute bottom-32 right-1/3 w-6 h-3 bg-green-300/60 rounded-full transform -rotate-12 animate-float" style={{ animationDelay: '4s' }}></div>
       </div>
@@ -43,15 +40,16 @@ const Hero = () => {
               <span className="text-sm font-semibold text-gray-700 tracking-wide">HANDCRAFTED WITH LOVE</span>
             </div>
 
+            {/* Brand Name */}
+            <h2 className="font-playfair text-3xl md:text-4xl font-medium text-rose-600 mb-4">
+              ARA Bakers
+            </h2>
+
             {/* Main Heading */}
-            <h1 className="font-playfair text-5xl md:text-7xl font-bold text-gray-800 mb-6 text-shadow-soft leading-tight">
-              ARA Bakes
+            <h1 className="font-gilroy text-5xl md:text-7xl font-black text-gray-800 mb-6 text-shadow-soft leading-tight">
+              Homemade Cakes
               <br />
               <span className="bg-gradient-to-r from-rose-500 via-pink-500 to-rose-600 bg-clip-text text-transparent">
-                Homemade Cakes
-              </span>
-              <br />
-              <span className="text-3xl md:text-4xl text-gray-600 font-medium">
                 Made with Love
               </span>
             </h1>
@@ -103,7 +101,7 @@ const Hero = () => {
               <div className="absolute -inset-4 bg-gradient-to-br from-pink-200/40 to-rose-200/40 rounded-3xl blur-xl"></div>
               
               <img
-                src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&fit=crop&w=600&h=500"
+                src="https://images.unsplash.com/photo-1464349095431-e9a21285b5f3?auto=format&fit=crop&w=600&h=500"
                 alt="Beautiful homemade cake by ARA Bakes"
                 className="relative w-full h-96 lg:h-[500px] object-cover rounded-3xl shadow-elegant border-4 border-white/50 animate-bounce-slow"
               />

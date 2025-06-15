@@ -22,6 +22,7 @@ export default {
 			fontFamily: {
 				'inter': ['Inter', 'sans-serif'],
 				'playfair': ['Playfair Display', 'serif'],
+				'gilroy': ['Gilroy', 'sans-serif'],
 			},
 			colors: {
 				border: 'hsl(var(--border))',
@@ -81,6 +82,7 @@ export default {
 					900: '#701229'
 				},
 				'pink': {
+					25: '#FEFCFE',
 					50: '#FFF0F5',
 					100: '#FFDBEB',
 					200: '#FFC2D7',

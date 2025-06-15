@@ -125,28 +125,6 @@ const Footer = () => {
           </div>
         </div>
 
-        {/* Newsletter Section */}
-        <div className="mt-12 pt-8 border-t border-rose-200">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
-            <div>
-              <h3 className="font-playfair text-2xl font-semibold mb-2 text-gray-800">Stay Sweet</h3>
-              <p className="text-gray-600">
-                Subscribe to our newsletter for special offers, new cake releases, and sweet updates.
-              </p>
-            </div>
-            <div className="flex flex-col sm:flex-row gap-4">
-              <input
-                type="email"
-                placeholder="Enter your email"
-                className="flex-1 px-4 py-3 rounded-full bg-white text-gray-800 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-rose-500 border border-rose-200 shadow-soft"
-              />
-              <button className="px-6 py-3 bg-gradient-to-r from-rose-500 to-pink-500 hover:from-rose-600 hover:to-pink-600 text-white rounded-full font-semibold transition-all duration-300 hover:scale-105 shadow-soft">
-                Subscribe
-              </button>
-            </div>
-          </div>
-        </div>
-
         {/* Bottom Footer */}
         <div className="mt-12 pt-8 border-t border-rose-200 flex flex-col md:flex-row justify-between items-center">
           <p className="text-gray-600 text-sm">
