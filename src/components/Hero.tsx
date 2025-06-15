@@ -1,32 +1,40 @@
-
 import { Button } from '@/components/ui/button';
 import { MessageCircle } from 'lucide-react';
+import { Heart, Star } from 'lucide-react';
 
 const Hero = () => {
   const handleWhatsAppClick = () => {
     window.open('https://wa.me/947757155821', '_blank');
   };
 
+  const floatingParticles = [
+    { id: 1, icon: <Star size={20} className="text-yellow-400" />, style: "top-24 left-16 animate-float", delay: "0s" },
+    { id: 2, icon: <Heart size={20} className="text-rose-400" />, style: "bottom-28 right-24 animate-float", delay: "0.5s" },
+    { id: 3, icon: <Star size={14} className="text-pink-400" />, style: "top-1/2 left-32 animate-float", delay: "1s" },
+    { id: 4, icon: <Heart size={16} className="text-pink-500" />, style: "top-1/3 right-20 animate-float", delay: "1.5s" },
+    { id: 5, icon: <Star size={18} className="text-yellow-300" />, style: "bottom-32 left-1/4 animate-float", delay: "2s" },
+    { id: 6, icon: <Heart size={15} className="text-rose-300" />, style: "top-44 right-1/4 animate-float", delay: "2.5s" },
+  ];
+
   return (
     <section id="home" className="relative min-h-screen flex items-center justify-center gradient-hero overflow-hidden">
       {/* Floating decorative elements */}
       <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute top-20 left-10 w-40 h-40 rounded-full bg-gradient-to-br from-rose-200/40 to-pink-300/30 blur-2xl animate-float"></div>
-        <div className="absolute bottom-20 right-10 w-48 h-48 rounded-full bg-gradient-to-br from-pink-200/40 to-rose-300/30 blur-2xl animate-float" style={{ animationDelay: '1s' }}></div>
-        <div className="absolute top-1/2 left-1/4 w-32 h-32 rounded-full bg-gradient-to-br from-rose-300/30 to-pink-200/40 blur-xl animate-float" style={{ animationDelay: '2s' }}></div>
-        
-        <div className="absolute top-32 right-32 animate-float" style={{ animationDelay: '0.5s' }}>
-          <div className="w-6 h-6 bg-red-400 rounded-full shadow-lg"></div>
-        </div>
-        <div className="absolute bottom-40 left-20 animate-float" style={{ animationDelay: '1.5s' }}>
-          <div className="w-4 h-4 bg-pink-400 rounded-full shadow-lg"></div>
-        </div>
-        <div className="absolute top-1/3 right-1/4 animate-float" style={{ animationDelay: '2.5s' }}>
-          <div className="w-5 h-5 bg-rose-400 rounded-full shadow-lg"></div>
-        </div>
-        
-        <div className="absolute top-24 left-1/3 w-8 h-4 bg-green-400/60 rounded-full transform rotate-45 animate-float" style={{ animationDelay: '3s' }}></div>
-        <div className="absolute bottom-32 right-1/3 w-6 h-3 bg-green-300/60 rounded-full transform -rotate-12 animate-float" style={{ animationDelay: '4s' }}></div>
+        {/* Animated stars & hearts */}
+        {floatingParticles.map((particle) => (
+          <div
+            key={particle.id}
+            className={`absolute ${particle.style}`}
+            style={{ animationDelay: particle.delay }}
+          >
+            {particle.icon}
+          </div>
+        ))}
+
+        {/* Decorative pink/rose circles - keep for smoothness & consistency */}
+        <div className="absolute top-20 left-10 w-32 h-32 rounded-full bg-gradient-to-br from-rose-200/40 to-pink-300/30 blur-2xl animate-float"></div>
+        <div className="absolute bottom-20 right-10 w-36 h-36 rounded-full bg-gradient-to-br from-pink-200/40 to-rose-300/30 blur-2xl animate-float" style={{ animationDelay: '1s' }}></div>
+        <div className="absolute top-1/2 left-1/4 w-20 h-20 rounded-full bg-gradient-to-br from-rose-300/30 to-pink-200/40 blur-xl animate-float" style={{ animationDelay: '2s' }}></div>
       </div>
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -34,11 +42,6 @@ const Hero = () => {
           
           {/* Text Content */}
           <div className="text-center lg:text-left animate-fade-in">
-            {/* Brand Name */}
-            <h2 className="font-playfair text-3xl md:text-4xl font-medium text-rose-600 mb-4">
-              ARA Bakers
-            </h2>
-
             {/* Main Heading */}
             <h1 className="font-gilroy text-5xl md:text-7xl font-black text-gray-800 mb-6 text-shadow-soft leading-tight">
               Homemade Cakes
