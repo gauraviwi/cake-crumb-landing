@@ -25,7 +25,7 @@ const Navigation = () => {
   const [open, setOpen] = useState(false);
   return (
     <nav
-      className="fixed top-2 sm:top-4 left-1/2 z-50 border border-white/40 border-opacity-30 bg-white/30 backdrop-blur-md shadow-md rounded-full px-3 sm:px-6 md:px-10 lg:px-20 py-2 flex items-center justify-between transition-all w-[95%] sm:w-full max-w-7xl"
+      className="fixed top-2 sm:top-4 left-1/2 z-50 border border-white/40 border-opacity-30 bg-white/30 backdrop-blur-md shadow-sm rounded-full px-3 sm:px-6 md:px-10 lg:px-12 py-2 flex items-center justify-between transition-all w-[95%] sm:w-full max-w-7xl"
       style={{ transform: 'translateX(-50%)' }}
     >
       {/* Mobile Hamburger */}
@@ -43,7 +43,7 @@ const Navigation = () => {
       </div>
       
       {/* Left links (desktop) */}
-      <div className="hidden md:flex items-center space-x-6 lg:space-x-16 flex-1 justify-start">
+      <div className="hidden md:flex items-center space-x-6 lg:space-x-12 flex-1 justify-start">
         <a
           href="#home"
           className="font-gilroy font-medium text-gray-700 hover:text-rose-600 transition-colors text-sm lg:text-base"
@@ -70,12 +70,12 @@ const Navigation = () => {
         <img
           src="/lovable-uploads/70ec725c-45a2-4059-ac28-33813fef7c69.png"
           alt="Business Logo"
-          className="h-8 w-8 sm:h-10 sm:w-10 md:h-12 md:w-12 lg:h-14 lg:w-14 object-contain transition-transform group-hover:scale-105"
+          className="h-8 w-8 sm:h-10 sm:w-10 md:h-11 md:w-11 lg:h-12 lg:w-12 object-contain transition-transform group-hover:scale-105"
         />
       </a>
       
       {/* Right links (desktop) */}
-      <div className="hidden md:flex items-center space-x-6 lg:space-x-16 flex-1 justify-end">
+      <div className="hidden md:flex items-center space-x-6 lg:space-x-12 flex-1 justify-end">
         <a
           href="#menu"
           className="font-gilroy font-medium text-gray-700 hover:text-rose-600 transition-colors text-sm lg:text-base"
@@ -94,12 +94,12 @@ const Navigation = () => {
       
       {/* Mobile links dropdown */}
       {open && (
-        <div className="absolute top-full left-0 w-full bg-white/95 shadow-md rounded-b-2xl flex flex-col py-2 z-30 border-t border-rose-100 md:hidden animate-fade-in">
+        <div className="absolute top-full left-0 w-full bg-white/95 shadow-md rounded-b-2xl flex flex-col py-1 z-30 border-t border-rose-100 md:hidden animate-fade-in">
           {NAV_LINKS.map(link => (
             <a
               key={link.label}
               href={link.target}
-              className="block py-2 px-4 text-base font-gilroy font-semibold text-gray-700 hover:text-rose-600 transition-colors"
+              className="block py-2 px-4 text-sm font-gilroy font-medium text-gray-700 hover:text-rose-600 transition-colors"
               onClick={e => {
                 handleNavClick(e, link.target);
                 setOpen(false);
