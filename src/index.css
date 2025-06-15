@@ -16,26 +16,26 @@
     --popover: 0 0% 100%;
     --popover-foreground: 25 20% 15%;
 
-    --primary: 25 35% 25%;
-    --primary-foreground: 48 100% 95%;
+    --primary: 340 75% 55%;
+    --primary-foreground: 0 0% 100%;
 
-    --secondary: 48 50% 96%;
+    --secondary: 15 100% 97%;
     --secondary-foreground: 25 35% 25%;
 
-    --muted: 48 30% 95%;
+    --muted: 15 30% 95%;
     --muted-foreground: 25 15% 45%;
 
-    --accent: 48 50% 96%;
+    --accent: 15 100% 97%;
     --accent-foreground: 25 35% 25%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 48 20% 90%;
-    --input: 48 20% 90%;
-    --ring: 25 35% 25%;
+    --border: 15 20% 90%;
+    --input: 15 20% 90%;
+    --ring: 340 75% 55%;
 
-    --radius: 0.5rem;
+    --radius: 1rem;
 
     --sidebar-background: 0 0% 98%;
     --sidebar-foreground: 240 5.3% 26.1%;
@@ -57,7 +57,7 @@
     --popover: 25 20% 8%;
     --popover-foreground: 48 50% 95%;
 
-    --primary: 48 50% 85%;
+    --primary: 340 75% 65%;
     --primary-foreground: 25 35% 15%;
 
     --secondary: 25 15% 15%;
@@ -74,7 +74,7 @@
 
     --border: 25 15% 20%;
     --input: 25 15% 20%;
-    --ring: 48 50% 75%;
+    --ring: 340 75% 65%;
 
     --sidebar-background: 240 5.9% 10%;
     --sidebar-foreground: 240 4.8% 95.9%;
@@ -98,11 +98,23 @@
 }
 
 @layer utilities {
-  .gradient-warm {
-    background: linear-gradient(135deg, #FFF8E7 0%, #F8E8E8 100%);
+  .gradient-soft {
+    background: linear-gradient(135deg, #FFF5F7 0%, #F8F0F5 50%, #FFE8F0 100%);
   }
   
-  .text-shadow {
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+  .gradient-hero {
+    background: linear-gradient(135deg, #FFE8F0 0%, #FFF5F7 100%);
+  }
+  
+  .text-shadow-soft {
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  }
+  
+  .shadow-soft {
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  }
+  
+  .shadow-card {
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12);
   }
 }
