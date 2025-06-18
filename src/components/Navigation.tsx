@@ -25,7 +25,7 @@ const Navigation = () => {
   const [open, setOpen] = useState(false);
   return (
     <nav
-      className="fixed top-2 sm:top-4 left-1/2 z-50 border border-white/40 border-opacity-30 bg-white/30 backdrop-blur-md shadow-sm rounded-full px-3 sm:px-6 md:px-10 lg:px-12 py-2 flex items-center justify-between transition-all w-[95%] sm:w-full max-w-7xl"
+      className="fixed top-2 sm:top-4 left-1/2 z-50 border border-white/40 border-opacity-30 bg-white/30 backdrop-blur-md shadow-sm rounded-full px-3 sm:px-6 md:px-10 lg:px-16 xl:px-20 py-2 flex items-center justify-between transition-all w-[95%] sm:w-full max-w-[1200px]"
       style={{ transform: 'translateX(-50%)' }}
     >
       {/* Mobile Hamburger */}
@@ -43,7 +43,7 @@ const Navigation = () => {
       </div>
       
       {/* Left links (desktop) */}
-      <div className="hidden md:flex items-center space-x-6 lg:space-x-12 flex-1 justify-start">
+      <div className="hidden md:flex items-center space-x-6 lg:space-x-12 xl:space-x-16 flex-1 justify-start">
         <a
           href="#home"
           className="font-gilroy font-medium text-gray-700 hover:text-rose-600 transition-colors text-sm lg:text-base"
@@ -75,7 +75,7 @@ const Navigation = () => {
       </a>
       
       {/* Right links (desktop) */}
-      <div className="hidden md:flex items-center space-x-6 lg:space-x-12 flex-1 justify-end">
+      <div className="hidden md:flex items-center space-x-6 lg:space-x-12 xl:space-x-16 flex-1 justify-end">
         <a
           href="#menu"
           className="font-gilroy font-medium text-gray-700 hover:text-rose-600 transition-colors text-sm lg:text-base"

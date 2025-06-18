@@ -5,7 +5,7 @@ import { Heart, Star } from 'lucide-react';
 
 const Hero = () => {
   const handleWhatsAppClick = () => {
-    window.open('https://wa.me/947757155821', '_blank');
+    window.open('https://wa.me/94775715582', '_blank');
   };
 
   const floatingParticles = [

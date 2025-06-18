@@ -5,7 +5,7 @@ import { MessageCircle, MapPin, Clock, Heart } from 'lucide-react';
 
 const Contact = () => {
   const handleWhatsAppClick = () => {
-    window.open('https://wa.me/947757155821', '_blank');
+    window.open('https://wa.me/94775715582', '_blank');
   };
 
   return (
@@ -42,15 +42,16 @@ const Contact = () => {
                   <div className="p-3 bg-gradient-to-r from-green-100 to-green-50 rounded-xl">
                     <MessageCircle className="h-6 w-6 text-green-600" />
                   </div>
-                  <div>
+                  <div className="flex-1 min-w-0">
                     <h4 className="font-semibold text-gray-800 mb-1">
                       WhatsApp Number
                     </h4>
-                    <p className="text-gray-600 mb-2">+947757155821</p>
+                    <p className="text-gray-600 mb-2 break-all">+94775715582</p>
                     <Button 
                       onClick={handleWhatsAppClick}
-                      className="bg-gradient-to-r from-green-500 to-green-600 hover:from-green-600 hover:to-green-700 text-white rounded-full px-6 py-2 text-sm"
+                      className="bg-gradient-to-r from-green-500 to-green-600 hover:from-green-600 hover:to-green-700 text-white rounded-full px-4 py-2 text-xs sm:text-sm w-full sm:w-auto"
                     >
+                      <MessageCircle className="h-4 w-4 mr-2" />
                       Message Now
                     </Button>
                   </div>
@@ -132,9 +133,9 @@ const Contact = () => {
                   <Button 
                     onClick={handleWhatsAppClick}
                     size="lg"
-                    className="bg-gradient-to-r from-green-500 to-green-600 hover:from-green-600 hover:to-green-700 text-white rounded-full px-8 py-3 w-full flex items-center justify-center gap-3"
+                    className="bg-gradient-to-r from-green-500 to-green-600 hover:from-green-600 hover:to-green-700 text-white rounded-full px-6 py-3 w-full flex items-center justify-center gap-2 text-sm sm:text-base"
                   >
-                    <MessageCircle className="h-5 w-5" />
+                    <MessageCircle className="h-4 w-4 sm:h-5 sm:w-5" />
                     Start Your Order
                   </Button>
                 </div>
