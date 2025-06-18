@@ -1,4 +1,3 @@
-
 import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { MessageCircle, Heart, Star } from 'lucide-react';
@@ -46,7 +45,7 @@ const FeaturedCakes = () => {
   const handleWhatsAppOrder = (cakeName: string) => {
     const message = `Hi! I'd like to order a ${cakeName} from ARA Bakes.`;
     const encodedMessage = encodeURIComponent(message);
-    window.open(`https://wa.me/947757155821?text=${encodedMessage}`, '_blank');
+    window.open(`https://wa.me/94775715582?text=${encodedMessage}`, '_blank');
   };
 
   return (
@@ -151,7 +150,7 @@ const FeaturedCakes = () => {
               className="bg-gradient-to-r from-green-500 to-green-600 hover:from-green-600 hover:to-green-700 text-white rounded-full px-10 py-4 text-lg font-bold flex items-center gap-4 mx-auto transition-all duration-300 hover:scale-105"
             >
               <MessageCircle className="h-6 w-6" />
-              WhatsApp: +947757155821
+              WhatsApp: +94775715582
             </Button>
           </div>
         </div>
